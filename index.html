@@ -1,23 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web 3D</title>
+    <title>Ian Resina - Portafolis</title>
     <style>
-        a {
-            display: block; /* Fa que cada enllaç ocupi tota la línia */
-            margin-bottom: 5px; /* Espai entre enllaços (opcional) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding-right: 30px;
+            z-index: 1000;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .container {
+            padding-top: 70px;
+            text-align: center;
+        }
+        .main-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+        .info {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+        .info a {
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            color: #074689;
+            text-align: center;
+        }
+        .info a:hover {
+            text-decoration: underline;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .box {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 10px;
+            width: 500px;
+            text-align: center;
+            border: 2px solid #ccc;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .box img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .about {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 10px;
+        }
+        .about p {
+            max-width: 600px;
+            margin: auto;
+            padding-top: 10px;
+        }
+        .about button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .about button:hover {
+            background-color: #333;
+        }
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                width: 90%;
+            }
+            .box img {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>3D WEBSITES</h1>
-    <h2>Sergi Gotarra</h2>
-
-
-    <a href="ex1/ex1.html">Exercici 1</a>
-    <a href="ex2/ex2.html">Exercici 2</a>
-    <a href="ex3/ex3.html">Exercici 3</a>
+    <header>
+        <nav>
+            <a href="#introduccio">Introducció</a>
+            <a href="#exercicis">Exercicis</a>
+            <a href="#sobre-mi">Sobre Mi</a>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="imatges/principal.jpg" alt="Imatge Principal" class="main-image">
+        <div class="info" id="introduccio">
+            <h2>PORTAFOLIS LLIBRERIES 3D</h2>
+            <p>Les llibreries 3D en JavaScript han revolucionat la creació d'entorns virtuals i experiències immersives a la web.</p>
+            <a href="curriculum.pdf" target="_blank">Descarrega el meu Currículum</a>
+        </div>
+        <div class="flex-container" id="exercicis">
+            <div class="box">
+                <img src="imatges/exercici1.png" alt="Exercici 1" onclick="location.href='ex1/ex1.html'">
+                <h3>Una aproximació a les llibreries 3D</h3>
+                <p>Exploració d'A-Frame en diferents dispositius.</p>
+            </div>
+            <div class="box">
+                <img src="imatges/construccio.png" alt="Exercici 2" onclick="location.href='ex2/ex2.html'">
+                <h3>Títol 2</h3>
+                <p>Descripció breu de l'exercici 2.</p>
+            </div>
+            <div class="box">
+                <img src="imatges/construccio.png" alt="Exercici 3" onclick="location.href='ex3/ex3.html'">
+                <h3>Títol 3</h3>
+                <p>Descripció breu de l'exercici 3.</p>
+            </div>
+        </div>
+        <div class="about" id="sobre-mi">
+            <h2>Ian Resina</h2>
+            <img src="imatges/sobremi.jpeg" alt="Foto de perfil">
+            <p>Estudiant de SMIX amb passió per la tecnologia i la programació.</p>
+            <button onclick="window.location.href='curriculum.pdf'">Descarrega el meu Curriculum</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ian Resina</p>
+    </footer>
 </body>
 </html>
