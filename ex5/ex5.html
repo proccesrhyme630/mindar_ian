@@ -12,6 +12,11 @@
           <img id="guernica" src="guernica.jpg" />        
           <img id="cara" src="6.jpg" />   
           <img id="bicicletes" src="7.jpg" />
+          <img id="rara" src="8.jpg" />   
+          <img id="bibis" src="test1.png" />
+          <img id="gga" src="donut.jpg" />
+          <img id="bees" src="bees.jpeg" />
+          <img id="pue" src="pup.png" />
      
         </a-assets>
         <a-sky src="#fons"></a-sky>
@@ -29,26 +34,124 @@
     animation="property: rotation; to: 30 360 30; dur: 150; loop: true"></a-box>
 
     <a-dodecahedron id="esmou" position="8 2 -6" rotation="0 30 0" radius="3" src="#bicicletes"></a-dodecahedron>
-        </a-scene>
+
+    <a-cylinder id="josepo" position="-17 5 -6" scale="1 15 1" rotation="90 0 0" radius="1" src="#rara"></a-cylinder>
+
+    <a-sphere id="torax" position="28 75 -24" scale="15 15 15" rotation="0 0 0" radius="1" src="#bibis"></a-sphere>
+
+    <a-torus id="arnau" position="35 2 -30" scale="1 1 1" rotation="0 0 0" radius="1" src="#gga"></a-torus>
+
+    <a-cone position="-35 0 30" scale="2 10 2" rotation="0 0 0" radius="1" src="#bees"></a-cone>
+
+    <a-torus-knot position="35 10 30" scale="2 2 2" rotation="0 0 0" src="#pue"></a-torus-knot>
+    
+    </a-scene>
 
         <script>
             let unobjecte = document.querySelector("#esmou");
          
             unobjecte.addEventListener("click", () => {            
               unobjecte.setAttribute("animation", {
+
+                property: "rotation",
   
   
-                property: "position",
+                to: "180 400 -6",
   
   
-                to: "8 40 -6",
-  
-  
-                dur: 10000
+                dur: 100,
+
+                loop: true
+
               });
             });
           </script>
+
+          <script>
+          
+          let esteobjecte = document.querySelector("#josepo");
+          
+          esteobjecte.addEventListener("click", () => {            
+            
+            esteobjecte.setAttribute("animation", {
+              
+              property: "position",
+              
+              to: "8 40 -6",
+              
+              dur: 10000
+            
+            });
+          
+          });
+
+          </script>
+
+          <script>
+          
+          let aquellobjecte = document.querySelector("#torax");
+          
+          aquellobjecte.addEventListener("click", () => {            
+            
+            aquellobjecte.setAttribute("animation", {
+              
+              property: "rotation",
+              
+              to: "0 360 0",
+              
+              dur: 10000,
+              
+              loop: true
+            
+            });
+          
+          });
+
+          </script>
+
+          <script>
+          
+          let altobjecte = document.querySelector("#arnau");
+          
+          altobjecte.addEventListener("click", () => {           
+
+                        
+            altobjecte.setAttribute("animation__desapareix", {
+              
+              property: "opacity",
+              
+              to: "0",
+              
+              dur: 1000,
+              
+            });
+
+                        
+            altobjecte.setAttribute("animation__apareix", {
+              
+              property: "opacity",
+              
+              to: "1",
+              
+              dur: 10000,
+            
+            });
+
+            altobjecte.setAttribute("animation__rotacio", {
+              
+              property: "rotation",
+              
+              to: "0 360 0",
+              
+              dur: 10000,
+              
+              loop: true
+            
+            });
   
+  });
+
+</script>          
   
 
   </body>
