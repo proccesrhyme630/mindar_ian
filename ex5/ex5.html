@@ -1,33 +1,36 @@
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  </head>
-  <body>
+
+<head>
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+</head>
+
+<body>
+  
+  <a-scene cursor="rayOrigin: mouse">
     
-    <a-scene cursor="rayOrigin: mouse">
-        <a-assets>
-            
-          <img id="fons" src="fons1.png" />
-          <img id="texturaterra" src="texturaterra.jpeg" />
-          <img id="guernica" src="guernica.jpg" />        
-          <img id="cara" src="6.jpg" />   
-          <img id="bicicletes" src="7.jpg" />
-          <img id="rara" src="8.jpg" />   
-          <img id="bibis" src="test1.png" />
-          <img id="gga" src="donut.jpg" />
-          <img id="bees" src="bees.jpeg" />
-          <img id="pue" src="pup.png" />
-     
-        </a-assets>
-        <a-sky src="#fons"></a-sky>
-        <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" src="#texturaterra"></a-plane>
-        
-        <a-plane position="-1 4 -8" rotation="0 0 0" width="8" height="2"  
-        
-        src="#guernica" 
-        animation="property: position; to: -1 4 -30; dur: 5000; dir: alternate; loop: true;">
+    <a-assets>
+      
+      <img id="fons" src="fons1.png" />
+      <img id="texturaterra" src="texturaterra.jpeg" />
+      <img id="guernica" src="guernica.jpg" />        
+      <img id="cara" src="6.jpg" />   
+      <img id="bicicletes" src="7.jpg" />
+      <img id="rara" src="8.jpg" />   
+      <img id="bibis" src="test1.png" />
+      <img id="gga" src="donut.jpg" />
+      <img id="bees" src="bees.jpeg" />
+      <img id="pue" src="pup.png" />
     
-    </a-plane>
+    </a-assets>
+    
+    <a-sky src="#fons"></a-sky>
+    
+    <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" src="#texturaterra"></a-plane>
+    <a-plane position="-1 4 -8" rotation="0 0 0" width="8" height="2"  
+    src="#guernica" 
+    animation="property: position; to: -1 4 -30; dur: 5000; dir: alternate; loop: true;"></a-plane>
     
     <a-box position="-4 3 0" rotation="0 0 50"  
     src="#cara" depth="1" height="1" width="1"
@@ -46,113 +49,103 @@
     <a-torus-knot position="35 10 30" scale="2 2 2" rotation="0 0 0" src="#pue"></a-torus-knot>
     
     </a-scene>
+    
+    <script>
+    
+    let unobjecte = document.querySelector("#esmou");
+    
+    unobjecte.addEventListener("click", () => {            
+      
+      unobjecte.setAttribute("animation", {
+        
+        property: "rotation",
+        
+        to: "180 400 -6",
+        
+        dur: 100,
+        
+        loop: true
 
-        <script>
-            let unobjecte = document.querySelector("#esmou");
-         
-            unobjecte.addEventListener("click", () => {            
-              unobjecte.setAttribute("animation", {
 
-                property: "rotation",
-  
-  
-                to: "180 400 -6",
-  
-  
-                dur: 100,
-
-                loop: true
-
-              });
-            });
-          </script>
-
-          <script>
+      });
+    
+    });
+    
+    let esteobjecte = document.querySelector("#josepo");
           
-          let esteobjecte = document.querySelector("#josepo");
-          
-          esteobjecte.addEventListener("click", () => {            
+    esteobjecte.addEventListener("click", () => {            
             
-            esteobjecte.setAttribute("animation", {
+      esteobjecte.setAttribute("animation", {
               
-              property: "position",
+        property: "position",
               
-              to: "8 40 -6",
+        to: "8 40 -6",
               
-              dur: 10000
+        dur: 10000
+      
+      });
+    
+    });
+          
+    let aquellobjecte = document.querySelector("#torax");
+          
+    aquellobjecte.addEventListener("click", () => {            
             
-            });
-          
-          });
-
-          </script>
-
-          <script>
-          
-          let aquellobjecte = document.querySelector("#torax");
-          
-          aquellobjecte.addEventListener("click", () => {            
+      aquellobjecte.setAttribute("animation", {
+        
+        property: "rotation",
+              
+        to: "0 360 0",
+              
+        dur: 10000,
+              
+        loop: true
             
-            aquellobjecte.setAttribute("animation", {
-              
-              property: "rotation",
-              
-              to: "0 360 0",
-              
-              dur: 10000,
-              
-              loop: true
-            
-            });
-          
-          });
+      });      
+    
+    });
+    
+    let altobjecte = document.querySelector("#arnau");
 
-          </script>
-
-          <script>
-          
-          let altobjecte = document.querySelector("#arnau");
-          
-          altobjecte.addEventListener("click", () => {           
+    altobjecte.addEventListener("click", () => {           
 
                         
-            altobjecte.setAttribute("animation__desapareix", {
+      altobjecte.setAttribute("animation__desapareix", {
               
-              property: "opacity",
+        property: "opacity",
               
-              to: "0",
+        to: "0",
               
-              dur: 1000,
+        dur: 1000,
               
-            });
-
-                        
-            altobjecte.setAttribute("animation__apareix", {
+      });
+                
+      altobjecte.setAttribute("animation__apareix", {
+          
+        property: "opacity",
               
-              property: "opacity",
+        to: "1",
               
-              to: "1",
-              
-              dur: 10000,
+        dur: 10000,
             
-            });
+      });
 
-            altobjecte.setAttribute("animation__rotacio", {
+      altobjecte.setAttribute("animation__rotacio", {
               
-              property: "rotation",
+        property: "rotation",
               
-              to: "0 360 0",
+        to: "0 360 0",
               
-              dur: 10000,
+        dur: 10000,
               
-              loop: true
+        loop: true
             
-            });
-  
-  });
+      });
 
-</script>          
+    });
+    
+    </script>
+    
+</body>
   
-
-  </body>
 </html>
