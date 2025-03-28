@@ -46,7 +46,7 @@
 
     <a-cone position="-35 5 30" scale="2 10 2" rotation="0 0 0" radius="1" src="#bees"></a-cone>
 
-    <a-torus-knot position="35 10 30" scale="2 2 2" rotation="0 0 0" src="#pue"></a-torus-knot>
+    <a-torus-knot id="cthulhu" position="35 10 30" scale="2 2 2" rotation="0 0 0" src="#pue"></a-torus-knot>
     
     </a-scene>
     
@@ -142,6 +142,32 @@
             
       });
 
+    });
+    
+    let cthulhu = document.querySelector("#cthulhu");
+    
+    cthulhu.addEventListener("mouseenter", () => {
+      
+      cthulhu.setAttribute("animation__hover", {
+        
+        property: "scale",
+        to: "3 3 3",
+        dur: 500,
+      
+      });
+
+    });
+    
+    cthulhu.addEventListener("mouseleave", () => {
+      
+      cthulhu.setAttribute("animation__hover", {
+        
+        property: "scale",
+        to: "2 2 2",
+        dur: 500,
+      
+      });
+    
     });
     
     </script>
