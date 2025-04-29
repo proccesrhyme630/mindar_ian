@@ -1,51 +1,68 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://castelletm12b.cat/build/assets/question.js" defer></script>
     <script>
-      AFRAME.registerComponent("mylink", {
-      init: function() {  
-       this.el.addEventListener("click", (e) => {              
-          window.location = this.data.href;      
-         })
-      }
-    })
-  </script>
+      
+      const bengala = document.querySelector("#flare");
+      const llum = document.querySelector("#flareluz");
+
+      bengala.addEventListener("click", () => {
+        llum.setAttribute("visible", "true");
+      });
+      
+      window.addEventListener("beforeunload", function () {
+        
+        localStorage.setItem("tornarDeWorld4", "true");
+      
+      });
+      
+    </script>
+
   </head>
 
   <body>
 
     <a-scene cursor="rayOrigin: mouse">
-      
+
       <a-assets>
-
-        <img id="la" src="7.jpg">
-        <audio id="musica" src="Assets/mus/mus_hospital.mp3" preload="auto"></audio>
-
+        <img id="cel" src="Assets/IMG/Cave/sky2.jpg" />
+        <img id="ground" src="Assets/IMG/Cave/ground.jpg" />
+        <a-asset-item id="flarez" src="Assets/TEX3/Flarez/scene.gltf"></a-asset-item>
+        <a-asset-item id="qmark" src="Assets/TEX3/qmark/scene.gltf"></a-asset-item>
+        <audio id="musica" src="Assets/mus/mus_cave.mp3" preload="auto"></audio>
       </a-assets>
 
-      <a-entity camera look-controls wasd-controls="false">
-
-        <a-entity cursor="fuse: true; fuseTimeout: 2000"
-                  position="0 0 -1"
-                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                  material="color: red; shader: flat"
-                  animation="property: components.material.material.color;
-                            type: color;
-                            to: white;
-                            dur: 1000;
-                            dir: alternate;
-                            loop: true">
-        </a-entity>
-
+      <a-sky src="#cel"></a-sky>
+      <a-entity light="type: ambient; color: #555"></a-entity>
+      <a-entity light="type: directional; color: #999; intensity: 0.1" position="0 10 0"></a-entity>
+      <a-plane src="#ground" rotation="-90 0 0" width="100" height="100" repeat="10 10"></a-plane>
+      <a-entity sound="src: #musica; autoplay: true; loop: true; volume: 0.5"></a-entity>
+      
+      <a-entity question="106" id="flare" gltf-model="#flarez" position="0 0 -5" rotation="0 90 0" scale="2.75 2.75 2.75">
+      
+        <a-entity light="type: point; color: red; intensity: 0.3; distance: 3" position="0 0.5 0"></a-entity>
+      
       </a-entity>
 
-      <a-sky src="#la"></a-sky>
-      <a-text value="Enhorabanona! Has guanyat." position="6 0 10" rotation="0 180 0" color="lime" scale="4 4 4"></a-text>
-
-      <a-text value="Resulta que tot era un mal somni, i portes en coma mes de 10 anys." position="8 -2 14" rotation="0 180 0" color="red" scale="3 3 3"></a-text>
-
-      <a-entity sound="src: #musica; autoplay: true; loop: true; volume: 0.5"></a-entity>
-
+      <a-entity id="flareluz" light="type: point; color: red; intensity: 2; distance: 15" position="45 2 -45"visible="false"></a-entity>
     </a-scene>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+        
+        document.querySelector("#anar-portal").addEventListener("click", () => {
+          
+          localStorage.setItem("tornarDeWorld4", "true");
+          
+          window.location.href = "world3.html";
+        
+        });
+      
+      });
+      
+      </script>
+
   </body>
 </html>

@@ -31,6 +31,7 @@
         <img id="pointer2" src="Assets/FUp/pointerz2.png">
         <img id="hatch" src="Assets/IMG/Cave/hatch.jpeg">
         <a-asset-item id="flarez" src="Assets/TEX3/Flarez/scene.gltf"></a-asset-item>
+        <a-asset-item id="qmark" src="Assets/TEX3/qmark/scene.gltf"></a-asset-item>
         <audio id="musica" src="Assets/mus/mus_cave.mp3" preload="auto"></audio>
       </a-assets>
 
@@ -40,7 +41,7 @@
       <a-plane src="#ground" rotation="-90 0 0" width="100" height="100" repeat="10 10"></a-plane>
       <a-entity sound="src: #musica; autoplay: true; loop: true; volume: 0.5"></a-entity>
       
-      <a-entity question="106" id="flare" gltf-model="#flarez" position="0 0.5 45" scale="2.25 2.25 2.25">
+      <a-entity question="106" id="flare" gltf-model="#flarez" position="-4 0.5 48" scale="2.25 2.25 2.25">
       
         <a-entity light="type: point; color: red; intensity: 0.3; distance: 3" position="0 0.5 0"></a-entity>
       
@@ -50,11 +51,13 @@
 
       <a-entity id="flareluz" light="type: point; color: red; intensity: 2; distance: 15" position="45 2 -45"visible="false"></a-entity>
 
-      <a-text value="90 N" position="-12 2 -10" color="yellow" scale="2 2 2"></a-text>
+      <a-text question="120" value="90 N" position="-12 2 -10" color="yellow" scale="2 2 2"></a-text>
 
-      <a-text value="42 W" position="43 1.5 -30" color="yellow" scale="2 2 2"></a-text>
+      <a-text question="121" value="42 W" position="43 1.5 -30" color="yellow" scale="2 2 2"></a-text>
 
-      <a-box question="109" position="-4 0.75 0" rotation="0 0 0" src="#hatch" depth="1" height="1" width="1" scale="4 4 4"></a-box> 
+      <a-entity question="109" gltf-model="#qmark" position="-2 1 -2" scale="0.20 0.20 0.20" animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear"></a-entity>
+
+      <a-box question="122" position="-4 0.75 45" rotation="0 0 0" src="#hatch" depth="1" height="1" width="1" scale="4 4 4"></a-box> 
 
     </a-scene>
 

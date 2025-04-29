@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+      AFRAME.registerComponent("mylink", {
+      init: function() {  
+       this.el.addEventListener("click", (e) => {              
+          window.location = this.data.href;      
+         })
+      }
+    })
+  </script>
+  </head>
+
+  <body>
+
+    <a-scene cursor="rayOrigin: mouse">
+      
+      <a-assets>
+
+        <img id="la" src="7.jpg">
+        <audio id="musica" src="Assets/mus/mus_hospital.mp3" preload="auto"></audio>
+
+      </a-assets>
+
+      <a-entity camera look-controls wasd-controls="false">
+
+        <a-entity cursor="fuse: true; fuseTimeout: 2000"
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: red; shader: flat"
+                  animation="property: components.material.material.color;
+                            type: color;
+                            to: white;
+                            dur: 1000;
+                            dir: alternate;
+                            loop: true">
+        </a-entity>
+
+      </a-entity>
+
+      <a-sky src="#la"></a-sky>
+      <a-text value="Enhorabanona! Has guanyat." position="6 0 10" rotation="0 180 0" color="lime" scale="4 4 4"></a-text>
+
+      <a-text value="Resulta que tot era un mal somni, i portes en coma mes de 10 anys." position="8 -2 14" rotation="0 180 0" color="red" scale="3 3 3"></a-text>
+
+      <a-entity sound="src: #musica; autoplay: true; loop: true; volume: 0.5"></a-entity>
+
+    </a-scene>
+  </body>
+</html>
