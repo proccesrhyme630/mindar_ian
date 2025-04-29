@@ -1,0 +1,8 @@
+Model Information:
+* title:	Stylized Tropical Pack
+* source:	https://sketchfab.com/3d-models/stylized-tropical-pack-27c1fe68c5fb4272a47eaa8972684a64
+* author:	evolveduk (https://sketchfab.com/evolveduk)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Larry-Boy Symbol
+* source:	https://sketchfab.com/3d-models/larry-boy-symbol-e92ea287cd2b4eb4ad0504eebe9584b7
+* author:	WhataModel (https://sketchfab.com/WhataModel)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Larry-Boy Symbol" (https://sketchfab.com/3d-models/larry-boy-symbol-e92ea287cd2b4eb4ad0504eebe9584b7) by WhataModel (https://sketchfab.com/WhataModel) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

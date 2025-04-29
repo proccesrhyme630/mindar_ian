@@ -1,0 +1,11 @@
+Model Information:
+* title:	Scroll with Maya writings
+* source:	https://sketchfab.com/3d-models/scroll-with-maya-writings-44936504fd474de0bfe55082e4fab075
+* author:	Rylae Shylna (https://sketchfab.com/risteralline)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Scroll with Maya writings" (https://sketchfab.com/3d-models/scroll-with-maya-writings-44936504fd474de0bfe55082e4fab075) by Rylae Shylna (https://sketchfab.com/risteralline) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://castelletm12b.cat/build/assets/question.js" defer></script> 
+    <script>
+      AFRAME.registerComponent("mylink", {
+        schema: { href: { type: "string" } },
+        init: function () {
+          this.el.addEventListener("click", () => {
+            window.location = this.data.href;
+          });
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+
+      <a-assets>
+        <img id="sky" src="6.jpg">
+        <a-asset-item id="cvr" src="Assets/TEX3/CVR/scene.gltf"></a-asset-item>
+        <audio id="musica" src="Assets/mus/mus_beach.mp3" preload="auto"></audio>
+      </a-assets>
+      
+      <a-entity sound="src: #musica; autoplay: true; loop: true; volume: 0.5"></a-entity>
+
+      <a-entity camera look-controls wasd-controls="false">
+        <a-entity cursor="fuse: true; fuseTimeout: 2000"
+                  position="0 0.5 -1"
+                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: red; shader: flat"
+                  animation="property: components.material.material.color;
+                            type: color;
+                            to: white;
+                            dur: 1000;
+                            dir: alternate;
+                            loop: true">
+        </a-entity>
+      </a-entity>
+
+      <a-sky src="#sky"></a-sky>
+
+      <a-entity gltf-model="#cvr" position="0 -170 -130" scale="0.5 0.5 0.5" question="101"></a-entity>
+
+    </a-scene>
+  </body>
+</html>

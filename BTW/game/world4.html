@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://castelletm12b.cat/build/assets/question.js" defer></script>
+    <script>
+      
+      const bengala = document.querySelector("#flare");
+      const llum = document.querySelector("#flareluz");
+
+      bengala.addEventListener("click", () => {
+        llum.setAttribute("visible", "true");
+      });
+      
+      window.addEventListener("beforeunload", function () {
+        
+        localStorage.setItem("tornarDeWorld4", "true");
+      
+      });
+      
+    </script>
+
+  </head>
+
+  <body>
+
+    <a-scene cursor="rayOrigin: mouse">
+
+      <a-assets>
+        <img id="cel" src="Assets/IMG/Cave/sky.jpg" />
+        <img id="ground" src="Assets/IMG/Cave/ground.jpg" />
+        <img id="pointer2" src="Assets/FUp/pointerz2.png">
+        <img id="hatch" src="Assets/IMG/Cave/hatch.jpeg">
+        <a-asset-item id="flarez" src="Assets/TEX3/Flarez/scene.gltf"></a-asset-item>
+        <audio id="musica" src="Assets/mus/mus_cave.mp3" preload="auto"></audio>
+      </a-assets>
+
+      <a-sky src="#cel"></a-sky>
+      <a-entity light="type: ambient; color: #555"></a-entity>
+      <a-entity light="type: directional; color: #999; intensity: 0.1" position="0 10 0"></a-entity>
+      <a-plane src="#ground" rotation="-90 0 0" width="100" height="100" repeat="10 10"></a-plane>
+      <a-entity sound="src: #musica; autoplay: true; loop: true; volume: 0.5"></a-entity>
+      
+      <a-entity question="106" id="flare" gltf-model="#flarez" position="0 0.5 45" scale="2.25 2.25 2.25">
+      
+        <a-entity light="type: point; color: red; intensity: 0.3; distance: 3" position="0 0.5 0"></a-entity>
+      
+      </a-entity>
+
+      <a-plane id="anar-portal" src="#pointer2" position="0 1 -45" scale="3 4 0" transparent="true" class="clickable"></a-plane>
+
+      <a-entity id="flareluz" light="type: point; color: red; intensity: 2; distance: 15" position="45 2 -45"visible="false"></a-entity>
+
+      <a-text value="90 N" position="-12 2 -10" color="yellow" scale="2 2 2"></a-text>
+
+      <a-text value="42 W" position="43 1.5 -30" color="yellow" scale="2 2 2"></a-text>
+
+      <a-box question="109" position="-4 0.75 0" rotation="0 0 0" src="#hatch" depth="1" height="1" width="1" scale="4 4 4"></a-box> 
+
+    </a-scene>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+        
+        document.querySelector("#anar-portal").addEventListener("click", () => {
+          
+          localStorage.setItem("tornarDeWorld4", "true");
+          
+          window.location.href = "world3.html";
+        
+        });
+      
+      });
+      
+      </script>
+
+  </body>
+</html>

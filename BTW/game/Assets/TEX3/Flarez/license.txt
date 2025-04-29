@@ -1,0 +1,11 @@
+Model Information:
+* title:	FLARE GUN
+* source:	https://sketchfab.com/3d-models/flare-gun-9344a579dce44b9d94f1fb9e03e18d4f
+* author:	Hadimhmd (https://sketchfab.com/Hadimhmd)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "FLARE GUN" (https://sketchfab.com/3d-models/flare-gun-9344a579dce44b9d94f1fb9e03e18d4f) by Hadimhmd (https://sketchfab.com/Hadimhmd) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

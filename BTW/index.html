@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape de l'Illa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Titillium Web', sans-serif;
+      color: white;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #003366, #001a33);
+    }
+
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(0, 51, 102, 0.85), rgba(0, 0, 0, 0.85)), url('titleimage.png') center center no-repeat;
+      background-size: contain;
+      background-color: #000;
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      line-height: 1.6;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-custom {
+      padding: 0.75rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 0.75rem;
+      background-color: #00d4ff;
+      border: none;
+      color: #003366;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 6px 15px rgba(0, 212, 255, 0.4);
+    }
+
+    .btn-custom:hover {
+      background-color: #00aacc;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-section">
+    <div class="overlay">
+      <h1>Escape de l'Illa</h1>
+      <p>
+        Has sobreviscut a un accident d'avió i t'has despertat en una illa desconeguda.<br>
+        El teu objectiu: sobreviure, resoldre misteris i trobar la manera d'escapar.<br>
+        Estàs preparat per al desafiament?
+      </p>
+      <a class="btn btn-custom" href="game/world1.html">Comença l'aventura</a>
+    </div>
+  </div>
+</body>
+</html>
